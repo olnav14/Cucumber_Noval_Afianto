@@ -48,9 +48,19 @@ public class AddToCart {
         String Sauce= driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
         Assert.assertEquals(Sauce, "Remove");
     }
+    @And("User Klik Remove")
+    public void klik_remove(){ driver.findElement(By.id("remove-sauce-labs-backpack")).click();
+    }
+
     @Then("Cart menampilkan jumlah barang")
     public void jumlah_cart_bertambah(){
         String Sauce= driver.findElement(By.className("shopping_cart_badge")).getText();
         Assert.assertEquals(Sauce, "1");
+    }
+    @Then("User berhasil Remove Item")
+    public void remove_cart(){driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).getText();
+        String Sauce= driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).getText();
+        Assert.assertEquals(Sauce, "Add to cart");
+
     }
 }
