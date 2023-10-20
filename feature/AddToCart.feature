@@ -1,6 +1,6 @@
 Feature: Add To Cart
 
-  //Senario 3
+   #Scenario 3
   Scenario: Add_to_cart_succes
     Given User masuk ke halaman login_1
     When User mamasukan username valid_1
@@ -11,8 +11,7 @@ Feature: Add To Cart
     And User berhasil add to cart
     Then Cart menampilkan jumlah barang
 
-
-    //Scenario 4
+    #Scenario 4
   Scenario: Remove_cart_succes
     Given User masuk ke halaman login_1
     When User mamasukan username valid_1
